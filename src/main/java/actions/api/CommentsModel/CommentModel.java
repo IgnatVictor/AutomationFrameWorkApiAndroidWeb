@@ -10,6 +10,10 @@ public class CommentModel {
         this.comment = comment;
     }
 
+    public CommentModel(String comment) {
+        this.comment = comment;
+    }
+
     public int getId() {
         return id;
     }
