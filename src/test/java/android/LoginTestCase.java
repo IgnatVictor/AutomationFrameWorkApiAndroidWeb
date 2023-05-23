@@ -1,27 +1,27 @@
 package android;
 
 
-import actions.android.mainActivity.MainActivity;
-import actions.android.secondActivity.SecondActivity;
+import actions.android.mainActivity.MainActivityObject;
+import actions.android.secondActivity.SecondActivityObject;
 import android.setupAndroid.SetupAndroid;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTestCase extends SetupAndroid {
 
-    private MainActivity createMainActivityObject() {
-        return new MainActivity(driver);
+    private MainActivityObject createMainActivityObject() {
+        return new MainActivityObject(driver);
     }
 
-    private SecondActivity createSecondActivityObject() {
-        return new SecondActivity(driver);
+    private SecondActivityObject createSecondActivityObject() {
+        return new SecondActivityObject(driver);
     }
 
     @Test
     public void checkThatAfterLoginItRedirectsToFirstPage() throws InterruptedException {
 
-        final MainActivity mainActivityObject = createMainActivityObject();
-        final SecondActivity secondActivityObject = createSecondActivityObject();
+        final MainActivityObject mainActivityObject = createMainActivityObject();
+        final SecondActivityObject secondActivityObject = createSecondActivityObject();
 
         mainActivityObject.setEmail(repositoryApplication.getEmail());
         mainActivityObject.setPassword(repositoryApplication.getPassword());
