@@ -3,9 +3,6 @@ package actions.api.controller;
 import actions.api.service.CommentsService;
 import actions.api.user.CommentsApi;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.google.gson.JsonObject;
-
-import java.util.ArrayList;
 
 public class CommentsController {
 
@@ -16,10 +13,8 @@ public class CommentsController {
     }
 
 
-    public ArrayList<JsonObject> getAllComments() throws JsonProcessingException {
+    public String[] getAllComments() {
 
         return commentsApi.getAllComments(commentsService.getAllComments());
-
     }
-
 }
