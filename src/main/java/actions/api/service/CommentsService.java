@@ -17,12 +17,10 @@ public class CommentsService {
 
     public CommentsService() throws JsonProcessingException {
         generateCommentsFromApi();
-
     }
 
     public void generateCommentsFromApi() throws JsonProcessingException {
         commentModelArrayList = new ArrayList<>();
-
         ResponseEntity<String> response = restTemplate.getForEntity(API_BASE_URL, String.class);
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(response.getBody());
@@ -30,30 +28,16 @@ public class CommentsService {
         for (int i = 0; i < root.size(); i++) {
             JsonNode id = root.get(i).path("id");
             JsonNode comment = root.get(i).path("comment");
-
             commentModelArrayList.add(new CommentModel(id.asInt(), comment.asText()));
         }
     }
 
-    public ArrayList<String[]> getAllComments() {
-        int id= 0;
-        int comment =1;
+    public String[] getAllComments() {
+        String[] commentList = new String[3];
 
-        ArrayList<String[]> commentList =  new ArrayList<>();
-
-        for(CommentModel commentModel:commentModelArrayList ){
-            String[] commentDetails =  new String[2];
-
-            commentDetails[id] = String.valueOf(commentModel.getId());
-            commentDetails[comment] = String.valueOf(commentModel.getComment());
-
-            commentList.add(commentDetails);
+        for (int i = 0; i < commentModelArrayList.size(); i++) {
+            commentList[i] = commentModelArrayList.get(i).getComment();
         }
-
-        return  commentList;
+        return commentList;
     }
-
-
-
-
 }
