@@ -11,7 +11,7 @@ public class RepositoryService {
 
 
     private void generateExpectedDataList() {
-        expectedDataList = new ExpectedDataModel[5];
+        expectedDataList = new ExpectedDataModel[8];
 
         expectedDataList[0] = new ExpectedDataModel(ExpectedData.SECOND_PAGE_TITLE);
         expectedDataList[1] = new ExpectedDataModel(InputData.EMAIL);
@@ -29,4 +29,5 @@ public class RepositoryService {
         }
         return expectedDataList[indexForVariable].getExpectedDataNameField();
     }
+
 }
