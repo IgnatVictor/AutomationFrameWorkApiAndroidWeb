@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public final class MainActivity {
+public final class MainActivityObject {
 
     private final WebDriver driver;
 
@@ -18,7 +18,7 @@ public final class MainActivity {
         return  wrongEmailMessage;
     }
 
-    public MainActivity(WebDriver driver) {
+    public MainActivityObject(WebDriver driver) {
         this.driver = driver;
     }
 
