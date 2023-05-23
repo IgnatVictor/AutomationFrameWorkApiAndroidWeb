@@ -46,6 +46,4 @@ public class RepositoryApplication {
         int firstComment = 7;
         return service.getVariableFromExpectedDataList(firstComment);
     }
-
-
 }
