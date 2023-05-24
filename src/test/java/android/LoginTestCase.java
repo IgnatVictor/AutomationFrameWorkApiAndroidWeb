@@ -3,11 +3,15 @@ package android;
 
 import actions.android.mainActivity.MainActivityObject;
 import actions.android.secondActivity.SecondActivityObject;
-import android.setupAndroid.SetupAndroid;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import common.BaseSetup;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTestCase extends SetupAndroid {
+public class LoginTestCase extends BaseSetup {
+
+    protected LoginTestCase() throws JsonProcessingException {
+    }
 
     private MainActivityObject createMainActivityObject() {
         return new MainActivityObject(driver);
@@ -19,7 +23,6 @@ public class LoginTestCase extends SetupAndroid {
 
     @Test
     public void checkThatAfterLoginItRedirectsToFirstPage() throws InterruptedException {
-
         final MainActivityObject mainActivityObject = createMainActivityObject();
         final SecondActivityObject secondActivityObject = createSecondActivityObject();
 
