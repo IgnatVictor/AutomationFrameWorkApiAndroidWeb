@@ -9,7 +9,6 @@ public class RepositoryService {
 
     private ExpectedDataModel[] expectedDataList;
 
-
     private void generateExpectedDataList() {
         expectedDataList = new ExpectedDataModel[14];
 
