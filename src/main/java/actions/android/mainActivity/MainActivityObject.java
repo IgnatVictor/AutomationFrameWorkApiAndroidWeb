@@ -37,7 +37,6 @@ public final class MainActivityObject {
         return loginButton;
     }
 
-
     public void setEmail(String email) {
         getEmail().sendKeys(email);
     }
