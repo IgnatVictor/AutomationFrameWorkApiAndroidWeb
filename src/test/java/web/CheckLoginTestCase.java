@@ -14,13 +14,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import repository.RepositoryApplication;
+import web.setupWeb.SetupWeb;
 
 import java.time.Duration;
 
-public class CheckLoginTestCase extends BaseSetup {
-
-    protected CheckLoginTestCase() throws JsonProcessingException {
-    }
+public class CheckLoginTestCase extends SetupWeb {
 
     private LoginPageObject createLoginPage() {
         return new LoginPageObject(webDriver);
@@ -28,28 +26,6 @@ public class CheckLoginTestCase extends BaseSetup {
 
     private MainPageObject createMainPage() {
         return new MainPageObject(webDriver);
-    }
-
-    @BeforeMethod
-    @Override
-    public void setup() {
-        final String URL = "https://www.saucedemo.com";
-        repositoryApplication = new RepositoryApplication();
-        ChromeOptions options = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        webDriver = new ChromeDriver(options);
-
-        actionsObject = new Actions(webDriver);
-        wait = new FluentWait<>(webDriver).withTimeout(Duration.ofSeconds(30L)).pollingEvery(Duration.ofSeconds(5L)).ignoring(NoSuchElementException.class);
-
-        webDriver.manage().window().maximize();
-        webDriver.navigate().to(URL);
-    }
-
-    @AfterMethod
-    @Override
-    public void tearDown() {
-        webDriver.close();
-        webDriver.quit();
     }
 
     @Test

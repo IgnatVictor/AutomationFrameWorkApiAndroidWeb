@@ -2,15 +2,11 @@ package android;
 
 
 import actions.android.mainActivity.MainActivityObject;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import common.BaseSetup;
+import android.setupAndroid.SetupAndroid;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EmailTestCase extends BaseSetup {
-
-    protected EmailTestCase() throws JsonProcessingException {
-    }
+public class EmailTestCase extends SetupAndroid {
 
     private MainActivityObject createMainActivityObject() {
         return new MainActivityObject(driver);

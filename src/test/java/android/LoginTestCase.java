@@ -3,15 +3,11 @@ package android;
 
 import actions.android.mainActivity.MainActivityObject;
 import actions.android.secondActivity.SecondActivityObject;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import common.BaseSetup;
+import android.setupAndroid.SetupAndroid;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTestCase extends BaseSetup {
-
-    protected LoginTestCase() throws JsonProcessingException {
-    }
+public class LoginTestCase extends SetupAndroid {
 
     private MainActivityObject createMainActivityObject() {
         return new MainActivityObject(driver);
