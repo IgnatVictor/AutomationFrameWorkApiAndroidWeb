@@ -1,4 +1,4 @@
-package actions.api.CommentsModel;
+package actions.api.commentsModel;
 
 public class CommentModel {
 

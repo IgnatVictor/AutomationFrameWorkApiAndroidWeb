@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public final class MainActivity {
+public final class MainActivityObject {
 
     private final WebDriver driver;
 
@@ -18,7 +18,7 @@ public final class MainActivity {
         return  wrongEmailMessage;
     }
 
-    public MainActivity(WebDriver driver) {
+    public MainActivityObject(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -36,7 +36,6 @@ public final class MainActivity {
         loginButton =   driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"));
         return loginButton;
     }
-
 
     public void setEmail(String email) {
         getEmail().sendKeys(email);

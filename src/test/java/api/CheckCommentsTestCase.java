@@ -15,6 +15,7 @@ public class CheckCommentsTestCase extends SetupApi {
     }
 
 
+
     @Test
     public void checkTheThreeCommentsFromApi() {
 
@@ -26,5 +27,4 @@ public class CheckCommentsTestCase extends SetupApi {
 
         softAssert.assertAll();
     }
-
 }

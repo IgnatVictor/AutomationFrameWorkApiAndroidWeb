@@ -12,7 +12,6 @@ public class CommentsController {
     public CommentsController() throws JsonProcessingException {
     }
 
-
     public String[] getAllComments() {
 
         return commentsApi.getAllComments(commentsService.getAllComments());

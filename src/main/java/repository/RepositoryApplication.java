@@ -46,4 +46,34 @@ public class RepositoryApplication {
         int firstComment = 7;
         return service.getVariableFromExpectedDataList(firstComment);
     }
+
+    public String getUsernameForWeb() {
+        int usernameForWeb = 8;
+        return service.getVariableFromExpectedDataList(usernameForWeb);
+    }
+
+    public String getPasswordForWeb() {
+        int passwordForWeb = 9;
+        return service.getVariableFromExpectedDataList(passwordForWeb);
+    }
+
+    public String getMainPageTitleText() {
+        int mainPageTitleText = 10;
+        return service.getVariableFromExpectedDataList(mainPageTitleText);
+    }
+
+    public String getWrongUsernameForWeb() {
+        int wrongUsernameForWeb = 11;
+        return service.getVariableFromExpectedDataList(wrongUsernameForWeb);
+    }
+
+    public String getWrongPasswordForWeb() {
+        int wrongPasswordForWeb = 12;
+        return service.getVariableFromExpectedDataList(wrongPasswordForWeb);
+    }
+
+    public String getInvalidCredentialsMessageText() {
+        int invalidCredentialsMessage = 13;
+        return service.getVariableFromExpectedDataList(invalidCredentialsMessage);
+    }
 }

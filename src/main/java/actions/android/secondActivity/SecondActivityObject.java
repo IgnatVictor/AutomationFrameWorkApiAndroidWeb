@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public final class SecondActivity {
+public final class SecondActivityObject {
 
     private final WebDriver driver;
 
     private WebElement secondPageTitle;
 
-    public SecondActivity(WebDriver driver) {
+    public SecondActivityObject(WebDriver driver) {
         this.driver = driver;
     }
 
